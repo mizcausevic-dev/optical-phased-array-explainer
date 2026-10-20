@@ -1,0 +1,129 @@
+{
+  "id": "p28",
+  "title": "Optical Phased Array",
+  "category": "Metasurface Optics",
+  "silhouette": "lattice",
+  "slowMotion": false,
+  "falseColor": false,
+  "nodes": [
+    {
+      "id": "n1",
+      "glyph": "die",
+      "label": "Die",
+      "role": "path",
+      "x": 0.22,
+      "y": 0.24
+    },
+    {
+      "id": "n2",
+      "glyph": "plate",
+      "label": "Coherent input",
+      "role": "structure",
+      "x": 0.5,
+      "y": 0.24
+    },
+    {
+      "id": "n3",
+      "glyph": "coil",
+      "label": "Heater phase shifts",
+      "role": "sense",
+      "x": 0.78,
+      "y": 0.24
+    },
+    {
+      "id": "n4",
+      "glyph": "optic",
+      "label": "Far-field lobe in one axis",
+      "role": "path",
+      "x": 0.22,
+      "y": 0.52
+    },
+    {
+      "id": "n5",
+      "glyph": "wavelength",
+      "label": "Wavelength-based second-axis steering in this example",
+      "role": "path",
+      "x": 0.5,
+      "y": 0.52
+    }
+  ],
+  "edges": [
+    {
+      "from": "n1",
+      "to": "n2",
+      "role": "path",
+      "start": 150,
+      "end": 1019
+    },
+    {
+      "from": "n2",
+      "to": "n3",
+      "role": "sense",
+      "start": 300,
+      "end": 1019
+    },
+    {
+      "from": "n3",
+      "to": "n4",
+      "role": "path",
+      "start": 510,
+      "end": 1019
+    },
+    {
+      "from": "n4",
+      "to": "n5",
+      "role": "path",
+      "start": 750,
+      "end": 1019
+    }
+  ],
+  "emphasis": [
+    [
+      "n1"
+    ],
+    [
+      "n2"
+    ],
+    [
+      "n3"
+    ],
+    [
+      "n4"
+    ],
+    [
+      "n5"
+    ]
+  ],
+  "stages": [
+    {
+      "f0": 0,
+      "f1": 149,
+      "action": "Reveal die",
+      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
+    },
+    {
+      "f0": 150,
+      "f1": 299,
+      "action": "Split coherent input",
+      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
+    },
+    {
+      "f0": 300,
+      "f1": 509,
+      "action": "Show heater phase shifts",
+      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
+    },
+    {
+      "f0": 510,
+      "f1": 749,
+      "action": "Steer far-field lobe in one axis",
+      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
+    },
+    {
+      "f0": 750,
+      "f1": 1019,
+      "action": "Show wavelength-based second-axis steering in this example",
+      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
+    }
+  ]
+}
